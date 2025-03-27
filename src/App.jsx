@@ -1,4 +1,5 @@
 // src/App.jsx
+import './App.scss';
 import RoutesComponent from "./components/RoutesComponent"; // Import du composant de routage
 
 function App() {
