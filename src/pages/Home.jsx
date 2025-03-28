@@ -1,5 +1,12 @@
+import Banner from '../components/Banner.jsx'
+import bannerHome from '../assets/images/bannerHome.webp'
+
 function Home() {
-    return <h1>Bienvenue sur la page d'accueil !</h1>;
+    return (
+        <div>
+            <Banner backgroundImage={bannerHome} />
+        </div>
+    );
 }
   
 export default Home;

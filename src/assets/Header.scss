@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 100px;
+  h1 {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  font-size: 24px;
+  font-weight: 500;
+  gap: 57px;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: 20px;
+
+        img {
+            content: url('../assets/images/logoPhone.png');
+        }
+    }
+    
+    ul {
+        font-size: 12px;
+        gap: 20px;
+    }
+}

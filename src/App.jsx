@@ -1,11 +1,16 @@
-// src/App.jsx
-import './App.scss';
-import RoutesComponent from "./components/RoutesComponent"; // Import du composant de routage
+import '../src/assets/App.scss';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import RoutesComponent from "./components/RoutesComponent";
 
 function App() {
   return (
     <>
-      <RoutesComponent /> {/* Utilisation du composant de routage */}
+      <Header />
+      <main className="p-6">
+        <RoutesComponent />
+      </main>
+      <Footer />
     </>
   );
 }
