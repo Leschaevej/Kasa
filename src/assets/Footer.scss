@@ -9,12 +9,21 @@ footer {
     
     p {
         color: white;
-        font-size: 2.105vw;
+        font-size: 1.667vw;
         font-weight: 500;
-        margin-bottom: 2.632vw;
+        margin-bottom: 3.47vw;
     }
 }
 
+@media (min-width: 1440px) {
+    footer img {
+        margin: 50px 0;
+    }
+    footer p {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+}
 @media (max-width: 768px) {
     footer p {
       font-size: 3.2vw;

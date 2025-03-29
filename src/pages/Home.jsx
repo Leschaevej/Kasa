@@ -7,11 +7,8 @@ function Home() {
     const bannerTitle = "Chez vous, partout et ailleurs";
 
     return (
-        <div>
-            {/* Bannière */}
+        <section>
             <Banner backgroundImage={bannerHome} title={bannerTitle} />
-
-            {/* Liste des logements */}
             <div className="cardContainer">
                 {logements.map((logement) => (
                     <Card 
@@ -21,7 +18,7 @@ function Home() {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 
