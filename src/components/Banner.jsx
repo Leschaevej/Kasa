@@ -1,12 +1,12 @@
 import "../assets/Banner.scss";
 
-const Banner = ({ backgroundImage }) => {
+const Banner = ({ backgroundImage, title }) => {
   return (
     <div
       className="banner"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-    <h2>Chez vous, partout et ailleurs</h2>
+      {title && <h2>{title}</h2>}
     </div>
   );
 };

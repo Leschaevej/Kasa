@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 100px;
+  margin: 50px 6.94vw;
   h1 {
     visibility: hidden;
     position: absolute;
@@ -26,7 +26,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+@media (min-width: 1440px) {
+    header {
+        margin: 50px 100px;
+    }
+}
 @media (max-width: 768px) {
     header {
         margin: 20px;

@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 0 100px;
+    margin: 0 6.94vw;
     margin-bottom: 50px;
     background-position: center center;
     border-radius: 30px;
@@ -25,9 +25,11 @@
 }
   
 h2 {
-    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: 0 50px;
     color: white;
-    font-size: 48px;
+    font-size: 3.33vw;
     font-weight: 700;
     z-index: 1;
     text-shadow: 
@@ -37,14 +39,24 @@ h2 {
         -1px 1px 0px black;
 }
 
+@media (min-width: 1440px) {
+    .banner {
+        margin: 50px 100px;
+    }
+    h2{
+        font-size: 48px;
+    }
+}
 @media (max-width: 768px) {
     .banner {
         height: 111px;
         margin: 0 20px;
-        justify-content: flex-start;
+        margin-bottom: 20px;
+
     }
     h2 {
-      font-size: 24px;
-      margin-left: 20px;
+      font-size: 25px;
+      margin: 5.33vw;
+      text-align: left;
     }
 }
