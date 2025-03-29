@@ -1,12 +1,11 @@
 .banner {
     background-size: cover;
-    height: 223px;
+    height: 15.49vw;
+    margin: 0 6.94vw 3.47vw 6.94vw;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 0 6.94vw;
-    margin-bottom: 50px;
     background-position: center center;
     border-radius: 30px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -27,7 +26,7 @@
 h2 {
     width: 100%;
     text-align: center;
-    margin: 0 50px;
+    margin: 0 3.472vw;
     color: white;
     font-size: 3.33vw;
     font-weight: 700;
@@ -42,6 +41,7 @@ h2 {
 @media (min-width: 1440px) {
     .banner {
         margin: 50px 100px;
+        height: 223px;
     }
     h2{
         font-size: 48px;
@@ -49,13 +49,13 @@ h2 {
 }
 @media (max-width: 768px) {
     .banner {
-        height: 111px;
-        margin: 0 20px;
-        margin-bottom: 20px;
+        height: 29.6vw;
+        margin: 0 5.333vw;
+        margin-bottom: 5.333vw;
 
     }
     h2 {
-      font-size: 25px;
+      font-size: 6.667vw;
       margin: 5.33vw;
       text-align: left;
     }

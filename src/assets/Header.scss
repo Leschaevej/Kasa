@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 6.94vw;
+  margin: 3.47vw 6.94vw;
   h1 {
     visibility: hidden;
     position: absolute;
@@ -12,9 +12,9 @@ header {
 ul {
   list-style: none;
   display: flex;
-  font-size: 24px;
+  font-size: 1.667vw;
   font-weight: 500;
-  gap: 57px;
+  gap: 3.472vw;
   padding: 0;
 }
 
@@ -30,10 +30,14 @@ a:hover {
     header {
         margin: 50px 100px;
     }
+    ul {
+        font-size: 24px;
+        gap: 50px;
+    }
 }
 @media (max-width: 768px) {
     header {
-        margin: 20px;
+        margin: 5.33vw;
 
         img {
             content: url('../assets/images/logoPhone.png');
@@ -41,7 +45,7 @@ a:hover {
     }
     
     ul {
-        font-size: 12px;
-        gap: 20px;
+        font-size: 3.2vw;
+        gap: 5.33vw;
     }
 }

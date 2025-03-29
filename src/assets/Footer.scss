@@ -4,19 +4,19 @@ footer {
     flex-direction: column;
     align-items: center;
     img {
-        margin: 50px 0;
+        margin: 3.47vw 0;
     }
     
     p {
         color: white;
-        font-size: 24px;
+        font-size: 2.105vw;
         font-weight: 500;
-        margin-bottom: 30px;
+        margin-bottom: 2.632vw;
     }
 }
 
 @media (max-width: 768px) {
     footer p {
-      font-size: 12px;
+      font-size: 3.2vw;
     }
 }
