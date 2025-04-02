@@ -7,25 +7,24 @@ header {
     visibility: hidden;
     position: absolute;
   }
+  ul {
+    list-style: none;
+    display: flex;
+    font-size: 1.667vw;
+    font-weight: 500;
+    gap: 3.472vw;
+    padding: 0;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  font-size: 1.667vw;
-  font-weight: 500;
-  gap: 3.472vw;
-  padding: 0;
-}
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 @media (min-width: 1440px) {
     header {
         margin: 50px 100px;

@@ -8,7 +8,6 @@
     gap: var(--cardContainerGap);
     justify-items: center;
 }
-
 .card {
     width: 100%;
     aspect-ratio: 1;
@@ -21,19 +20,16 @@
     justify-content: flex-end;
     transition: transform 0.3s ease;
     will-change: transform, box-shadow;
+    h3 {
+        font-size: var(--cardFontSizeH3);
+        color: white;
+        z-index: 1;
+        padding: var(--cardPaddingH3);
+    }
 }
-
 .card:hover {
     cursor: pointer;
 }
-
-.card h3 {
-    font-size: var(--cardFontSizeH3);
-    color: white;
-    z-index: 1;
-    padding: var(--cardPaddingH3);
-}
-
 @media (min-width: 1440px) {
     .cardContainer {
         gap: var(--largeCardContainerGap);
@@ -45,13 +41,12 @@
     .card {
         width: var(--largeCardSize);
         height: var(--largeCardSize);
-    }
-    .card h3 {
-        font-size: var(--largeFontSizeH3);
-        padding: var(--largePaddingH3);
-    }
+        h3 {
+            font-size: var(--largeFontSizeH3);
+            padding: var(--largePaddingH3);
+        }
+    } 
 }
-
 @media (max-width: 768px) {
     .cardContainer {
         grid-template-columns: 1fr;
@@ -60,13 +55,11 @@
         background-color: white;
         gap: var(--mobileCardContainerGap);
     }
-
     .card {
         height: var(--mobileCardHeight);
-    }
-
-    .card h3 {
-        font-size: var(--mobileFontSizeH3);
-        padding: var(--mobilePaddingH3);
+        h3 {
+            font-size: var(--mobileFontSizeH3);
+            padding: var(--mobilePaddingH3);
+        }
     }
 }
