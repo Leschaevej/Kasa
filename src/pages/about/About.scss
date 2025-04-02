@@ -1,46 +1,85 @@
 .about {
-    //Banner
-    --bannerHeight: 15.49vw;
-    --bannerMarginLeftRight: 6.94vw;
-    --bannermarginLeftRightH2: 3.47vw;
-            
-    --largeBannerHeight: 223px;
-    --largeFontSizeH2: 48px;
-        
-    --mobileBannerHeight: 29.6vw;
-    --mobileBannerMarginLeftRight: 5.333vw;
-    --mobileFontSizeH2: 6.667vw;
-    --mobileMarginH2: 5.33vw;
-
-    //Collapse
-    --collapseContainerMarginTopBottom: 2.778vw;
-    --collapseContainerMarginLeftRight: 13.889vw;
-    --collapseRowGap: 2.778vw;
-    --collapseHeaderHeight: 3.611vw;
-    --collapseHeaderPaddingTopBottom: 0.694vw;
-    --collapseHeaderPaddingLeftRight: 1.042vw;
-    --collapseTitleFontSize: 1.667vw;
-    --collapseArrowFontSize: 2.222vw;
-    --collapseContentFontSize: 1.25vw;
-    --collapseContentPaddingTopBottom: 0.694vw;
-    --collapseContentPaddingLeftRight: 1.042vw;
-      
-    --largeCollapseContainerMarginTopBottom: 40px;
-    --largeCollapseContainerMarginLeftRight: 200px;
-    --largeCollapseRowGap: 40px;
-    --largeCollapseHeaderHeight: 52px;
-    --largeCollapseHeaderPaddingTopBottom: 10px;
-    --largeCollapseHeaderPaddingLeftRight: 15px;
-    --largeCollapseTitleFontSize: 24px;
-    --largeCollapseArrowFontSize: 24px;
-    --largeCollapseContentFontSize: 18px;
-      
-    --mobileCollapseContainerMarginTopBottom: 5.333vw;
-    --mobileCollapseRowGap: 5.333vw;
-    --mobileCollapseHeaderHeight: 8vw;
-    --mobileCollapseHeaderPaddingTopBottom: 2.667vw;
-    --mobileCollapseHeaderPaddingLeftRight: 4vw;
-    --mobileCollapseTitleFontSize: 3.467vw;
-    --mobileCollapseArrowFontSize: 3.467vw;
-    --mobileCollapseContentFontSize: 3.467vw;
+    padding: 0 6.944vw;
+    .banner {
+        height: 15.49vw;
+    }
+    .collapseContainer {
+        margin: 2.778vw 0;
+        row-gap: 2.778vw;
+        .collapse{
+            .header{
+                height: 3.611vw;
+                padding: 0.694vw 1.042vw;
+            }
+            h3{
+                font-size: 1.667vw;
+            }
+            .arrow{
+                font-size: 2.222vw;
+            }
+            .content{
+                font-size: 1.25vw;
+            }
+            .content.open{
+                padding: 1.389vw;
+            }
+        }    
+    }
+}
+@media (min-width: 1440px) {
+    .about {
+        padding: 0 100px;
+        .banner {
+            height: 223px;
+        }
+        .collapseContainer {
+            margin: 40px 0;
+            row-gap: 40px;
+            .collapse{
+                .header{
+                    height: 52px;
+                    padding: 10px 15px;
+                }
+                h3{
+                    font-size: 24px;
+                }
+                .arrow{
+                    font-size: 24px;
+                }
+                .content{
+                    font-size: 18px;
+                }
+                .content.open{
+                    padding: 20px;
+                }
+            }    
+        }
+    } 
+}
+@media (max-width: 768px) {
+    .about {
+        padding: 0 5.333vw;
+        .banner {
+            height: 29.6vw;
+        }
+        .collapseContainer {
+            margin: 5.333vw 0;
+            row-gap: 5.333vw;
+            .collapse{
+                .header{
+                    height: 8vw;
+                    padding: 2.667vw 4vw;
+                }
+                h3{
+                    font-size: 3.467vw;
+                }
+                .arrow{
+                    font-size: 3.467vw;
+                }
+                .content{
+                    font-size: 2.667vw;
+                }
+            }    
+        }
+    } 
 }

@@ -1,7 +1,7 @@
-import './App.scss';
+import RoutesComponent from "../components/RoutesComponent";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import RoutesComponent from "../components/RoutesComponent";
+import './App.scss';
 
 function App() {
   return (

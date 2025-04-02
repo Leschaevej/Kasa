@@ -10,14 +10,14 @@ function Collapse({ title, content }) {
 
     return (
         <div className="collapse">
-            <button className="collapseHeader" onClick={toggleCollapse}>
-                <span className="collapseTitle">{title}</span>
-                <div className={`collapseArrow ${isOpen ? 'open' : ''}`}>
+            <button className="header" onClick={toggleCollapse}>
+                <h3>{title}</h3>
+                <div className={`arrow ${isOpen ? 'open' : ''}`}>
                     <i className={`fa-solid ${isOpen ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
                 </div>
             </button>
-            <div className={`collapseContent ${isOpen ? 'open' : ''}`}>
-                <p>{content}</p>
+            <div className={`content ${isOpen ? 'open' : ''}`}>
+                {content}
             </div>
         </div>
     );

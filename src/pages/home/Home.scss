@@ -1,38 +1,67 @@
 .home {
-    //Banner
-    --bannerHeight: 15.49vw;
-    --bannerMarginLeftRight: 6.94vw;
-    --bannermarginLeftRightH2: 3.47vw;
-        
-    --largeBannerHeight: 223px;
-    --largeFontSizeH2: 48px;
-    
-    --mobileBannerHeight: 29.6vw;
-    --mobileBannerMarginLeftRight: 5.333vw;
-    --mobileFontSizeH2: 6.667vw;
-    --mobileMarginH2: 5.33vw;
-
-    //Card
-    --cardContainerMarginTopBottom: 3.47vw;
-    --cardContainerMarginLeftRight: 6.94vw;
-    --cardContainerPadding: 3.74vw;
-    --cardContainerGap: 3.4722vw;
-    --cardFontSizeH3: 1.25vw;
-    --cardPaddingH3: 1.04vw;
-
-    --largeCardContainerGap: 50px;
-    --largeCardContainerMaxWidth: 1240px;
-    --largeCardContainerMargin: 100px;
-    --largeCardContainerMarginBottom: 50px;
-    --largeCardContainerPadding: 50px;
-    --largeCardSize: 340px;
-    --largeFontSizeH3: 18px;
-    --largePaddingH3: 15px;
-
-    --mobileCardContainerGap: 5.333vw;
-    --mobileCardContainerMarginTopBottom: 5.333vw;
-    --mobileCardContainerMarginleftRight: 5.333vw;
-    --mobileCardHeight: 68vw;
-    --mobileFontSizeH3: 4.8vw;
-    --mobilePaddingH3: 4vw;
+    padding: 0 6.944vw;
+    .banner {
+        height: 15.49vw;
+        h2{
+            font-size: 3.333vw;
+        }
+    }
+    .cardContainer {
+        background-color: #f6f6f6;
+        padding: 3.4722vw;
+        margin: 3.4722vw 0;
+        gap: 3.4722vw;
+        .card{
+            h3{
+                padding: 1.04vw;
+                font-size: 1.25vw;
+            }
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .home {
+        padding: 0 100px;
+        .banner {
+            height: 223px;
+            h2{
+                font-size: 48px;
+            }
+        }
+        .cardContainer {
+            padding: 50px;
+            margin: 50px 0;
+            gap: 50px;
+            .card{
+                h3{
+                    padding: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+    } 
+}
+@media (max-width: 768px) {
+    .home {
+        padding: 0 5.333vw;
+        .banner {
+            height: 29.6vw;
+            h2{
+                font-size: 6.4vw;
+            }
+        }
+        .cardContainer {
+            grid-template-columns: 1fr;
+            background-color: white;
+            padding: 0;
+            margin: 5.333vw 0;
+            gap: 5.333vw;
+            .card{
+                h3{
+                    padding: 5.333vw;
+                    font-size: 4.8vw;
+                }
+            }
+        }
+    } 
 }

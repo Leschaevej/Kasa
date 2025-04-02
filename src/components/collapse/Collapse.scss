@@ -2,86 +2,41 @@
     display: flex;
     flex-direction: column;
     justify-self: center;
-    margin: var(--collapseContainerMarginTopBottom) var(--collapseContainerMarginLeftRight);
-    row-gap: var(--collapseRowGap);
 }
 .collapse {
     width: 100%;
 }
-.collapseHeader {
+.header {
     width: 100%;
-    height: var(--collapseHeaderHeight);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ff6060;
-    padding: var(--collapseHeaderPaddingTopBottom) var(--collapseHeaderPaddingLeftRight);
     border-radius: 5px;
     cursor: pointer;
     border: none;
 }
-.collapseTitle {
-    font-size: var(--collapseTitleFontSize);
+h3 {
     font-weight: 700;
     color: white;
 }
-.collapseArrow {
+.arrow {
     transition: transform 0.3s ease-in-out;
-    font-size: var(--collapseArrowFontSize);
     color: white;
 }
-.collapseArrow.open {
+.arrow.open {
     transform: rotate(-180deg);
 }
-.collapseContent {
+.content {
     background-color: #fbfbfb;
-    font-size: var(--collapseContentFontSize);
     border-radius: 5px;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
 }
-.collapseContent.open {
+
+.content.open {
     max-height: 1000px;
     opacity: 1;
-    padding: var(--collapseContentPaddingTopBottom) var(--collapseContentPaddingLeftRight);
 }
-@media (min-width: 1440px) {
-    .collapseContainer {
-        margin: var(--largeCollapseContainerMarginTopBottom) var(--largeCollapseContainerMarginLeftRight);
-        row-gap: var(--largeCollapseRowGap);
-    }
-    .collapseHeader {
-        height: var(--largeCollapseHeaderHeight);
-        padding: var(--largeCollapseHeaderPaddingTopBottom) var(--largeCollapseHeaderPaddingLeftRight);
-    }
-    .collapseTitle {
-        font-size: var(--largeCollapseTitleFontSize);
-    }
-    .collapseArrow {
-        font-size: var(--largeCollapseArrowFontSize);
-    }
-    .collapseContent {
-        font-size: var(--largeCollapseContentFontSize);
-    }
-}
-@media (max-width: 768px) {
-    .collapseContainer {
-        margin: var(--mobileCollapseContainerMarginTopBottom);
-        row-gap: var(--mobileCollapseRowGap);
-    }
-    .collapseHeader {
-        height: var(--mobileCollapseHeaderHeight);
-        padding: var(--mobileCollapseHeaderPaddingTopBottom) var(--mobileCollapseHeaderPaddingLeftRight);
-    }
-    .collapseTitle {
-        font-size: var(--mobileCollapseTitleFontSize);
-    }
-    .collapseArrow {
-        font-size: var(--mobileCollapseArrowFontSize);
-    }
-    .collapseContent {
-        font-size: var(--mobileCollapseContentFontSize);
-    }
-} 

@@ -3,28 +3,39 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    row-gap: 2.143vw;
+    height: 14.929vw;
     img {
-        margin: 3.47vw 0;
+        width: 8.714vw;
     }
     p {
         color: white;
-        font-size: 1.667vw;
+        font-size: 1.714vw;
         font-weight: 500;
-        margin-bottom: 3.47vw;
     }
 }
-
 @media (min-width: 1440px) {
-    footer img {
-        margin: 50px 0;
-    }
-    footer p {
-        font-size: 24px;
-        margin-bottom: 50px;
+    footer {
+        row-gap: 30px;
+        height: 209px;
+        img {
+            width: 122px;
+        }
+        p {
+            font-size: 24px;
+        }
     }
 }
 @media (max-width: 768px) {
-    footer p {
-      font-size: 3.2vw;
+    footer {
+        row-gap: 8vw;
+        height: 55.733vw;
+        img {
+            width: 32.533vw;
+        }
+        p {
+            font-size: 3.2vw;
+        }
     }
 }

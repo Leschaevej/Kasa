@@ -1,0 +1,27 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    .carousel-image {
+        object-fit: cover;
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 80px;
+        &:hover {
+            color: #ff6060;
+        }
+    }
+    .left {
+        left: 10px;
+    }
+    .right {
+        right: 10px;
+    }
+}
