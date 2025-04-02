@@ -1,11 +1,12 @@
 import React from 'react';
-import Collapse from '../components/Collapse.jsx';
-import Banner from '../components/Banner';
-import bannerAbout from '../assets/images/bannerAbout.webp';
+import Collapse from '../../components/collapse/Collapse.jsx';
+import Banner from '../../components/banner/Banner.jsx';
+import bannerAbout from '../../assets/bannerAbout.webp';
+import "./About.scss"
 
 function About() {
     return (
-        <section>
+        <section className='about'>
             <Banner backgroundImage={bannerAbout} />
             <div className='collapseContainer'>
                 <Collapse

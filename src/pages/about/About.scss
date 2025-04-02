@@ -1,0 +1,46 @@
+.about {
+    //Banner
+    --bannerHeight: 15.49vw;
+    --bannerMarginLeftRight: 6.94vw;
+    --bannermarginLeftRightH2: 3.47vw;
+            
+    --largeBannerHeight: 223px;
+    --largeFontSizeH2: 48px;
+        
+    --mobileBannerHeight: 29.6vw;
+    --mobileBannerMarginLeftRight: 5.333vw;
+    --mobileFontSizeH2: 6.667vw;
+    --mobileMarginH2: 5.33vw;
+
+    //Collapse
+    --collapseContainerMarginTopBottom: 2.778vw;
+    --collapseContainerMarginLeftRight: 13.889vw;
+    --collapseRowGap: 2.778vw;
+    --collapseHeaderHeight: 3.611vw;
+    --collapseHeaderPaddingTopBottom: 0.694vw;
+    --collapseHeaderPaddingLeftRight: 1.042vw;
+    --collapseTitleFontSize: 1.667vw;
+    --collapseArrowFontSize: 2.222vw;
+    --collapseContentFontSize: 1.25vw;
+    --collapseContentPaddingTopBottom: 0.694vw;
+    --collapseContentPaddingLeftRight: 1.042vw;
+      
+    --largeCollapseContainerMarginTopBottom: 40px;
+    --largeCollapseContainerMarginLeftRight: 200px;
+    --largeCollapseRowGap: 40px;
+    --largeCollapseHeaderHeight: 52px;
+    --largeCollapseHeaderPaddingTopBottom: 10px;
+    --largeCollapseHeaderPaddingLeftRight: 15px;
+    --largeCollapseTitleFontSize: 24px;
+    --largeCollapseArrowFontSize: 24px;
+    --largeCollapseContentFontSize: 18px;
+      
+    --mobileCollapseContainerMarginTopBottom: 5.333vw;
+    --mobileCollapseRowGap: 5.333vw;
+    --mobileCollapseHeaderHeight: 8vw;
+    --mobileCollapseHeaderPaddingTopBottom: 2.667vw;
+    --mobileCollapseHeaderPaddingLeftRight: 4vw;
+    --mobileCollapseTitleFontSize: 3.467vw;
+    --mobileCollapseArrowFontSize: 3.467vw;
+    --mobileCollapseContentFontSize: 3.467vw;
+}

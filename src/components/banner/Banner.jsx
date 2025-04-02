@@ -1,4 +1,4 @@
-import "../assets/Banner.scss";
+import "./Banner.scss";
 
 const Banner = ({ backgroundImage, title }) => {
   return (
