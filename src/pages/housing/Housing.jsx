@@ -23,18 +23,21 @@ function Housing() {
                 </div>
                 <div className="hostRating">
                     <div className="host">
-                        <p className="name">{logement.host.name}</p>
+                        <p className="name">
+                            <span className="firstName">{logement.host.name.split(' ').slice(0, -1).join(' ')}</span>
+                            <span className="lastName">{logement.host.name.split(' ').slice(-1)}</span>
+                        </p>
                         <img className="picture" src={logement.host.picture} alt={logement.host.name} />
                     </div>
                     <div className="rating">
-                    {[...Array(5)].map((_, index) => {
-                        return (
-                        <i
-                            key={index}
-                            className={`fa-solid fa-star ${index < Math.floor(logement.rating) ? 'filled' : ''} ${index + 0.5 <= logement.rating ? 'half-filled' : ''}`}
-                        ></i>
-                        );
-                    })}
+                        {[...Array(5)].map((_, index) => {
+                            return (
+                            <i
+                                key={index}
+                                className={`fa-solid fa-star ${index < Math.floor(logement.rating) ? 'filled' : ''} ${index + 0.5 <= logement.rating ? 'half-filled' : ''}`}
+                            ></i>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

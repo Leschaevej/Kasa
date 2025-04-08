@@ -1,19 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Collapse.scss';
 
 function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
+    const containerRef = useRef(null);
 
     const toggleCollapse = () => {
-        setIsOpen(!isOpen);
+        setIsOpen((prev) => !prev);
     };
 
+    useEffect(() => {
+        if (isOpen && containerRef.current) {
+            const timer = setTimeout(() => {
+                const rect = containerRef.current.getBoundingClientRect();
+                const scrollOffset = rect.bottom - window.innerHeight + 30;
+
+                if (scrollOffset > 0) {
+                    window.scrollBy({
+                        top: scrollOffset,
+                        behavior: 'smooth',
+                    });
+                }
+            }, 50);
+
+            return () => clearTimeout(timer);
+        }
+    }, [isOpen]);
+
     return (
-        <div className="collapse">
-            <button className="header" onClick={toggleCollapse}>
+        <div ref={containerRef} className="collapse">
+            <button className="header" onClick={toggleCollapse} aria-expanded={isOpen}>
                 <h3>{title}</h3>
                 <div className={`arrow ${isOpen ? 'open' : ''}`}>
-                    <i className={`fa-solid ${isOpen ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
+                    <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                 </div>
             </button>
             <div className={`content ${isOpen ? 'open' : ''}`}>
