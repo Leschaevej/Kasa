@@ -32,7 +32,7 @@ function Collapse({ title, content }) {
             <button className="header" onClick={toggleCollapse} aria-expanded={isOpen}>
                 <h3>{title}</h3>
                 <div className={`arrow ${isOpen ? 'open' : ''}`}>
-                    <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                <i className="fa-solid fa-chevron-up"></i>
                 </div>
             </button>
             <div className={`content ${isOpen ? 'open' : ''}`}>

@@ -14,11 +14,27 @@ const Carousel = ({ images }) => {
 
     return (
         <div className="carousel">
-            <button className="arrow left" onClick={prevImage}>&#10094;</button>
-            <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel-image" />
-            <button className="arrow right" onClick={nextImage}>&#10095;</button>
+            {images.length > 1 && (
+                <button className="arrow left" onClick={prevImage}>&#10094;</button>
+            )}
+    
+            <img
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex + 1}`}
+                className="carousel-image"
+            />
+    
+            {images.length > 1 && (
+                <button className="arrow right" onClick={nextImage}>&#10095;</button>
+            )}
+    
+            {images.length > 1 && (
+                <div className="counter">
+                    {currentIndex + 1} / {images.length}
+                </div>
+            )}
         </div>
-    );
+    );    
 };
 
 export default Carousel;

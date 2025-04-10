@@ -14,6 +14,9 @@
                 color: #ff6060;
             }
         }
+        .counter {
+            font-size: 1.286vw;
+        }
     }
     .general{
         display: flex;
@@ -128,6 +131,9 @@
             .arrow {
                 font-size: 80px;
             }
+            .counter {
+                font-size: 18px;
+            }
         }
         .general{
             .info{
@@ -175,7 +181,7 @@
         .detail{
             gap: 50px;
             .collapse{
-                margin-bottom: 50px;
+                margin-bottom: 20px;
                 .header{
                     height: 52px;
                     padding: 10px 15px;
@@ -204,6 +210,9 @@
             height: 60vw;
             img {
             border-radius: 10px;
+            }
+            .counter {
+                font-size: 4.8vw;
             }
         }
         .general{

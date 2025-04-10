@@ -2,11 +2,16 @@ import { useParams } from "react-router-dom";
 import logements from "../../data/logements.json";
 import Collapse from "../../components/collapse/Collapse.jsx";
 import Carousel from "../../components/carousel/Carousel.jsx";
+import NotFound from "../notFound/NotFound";
 import "./Housing.scss";
 
 function Housing() {
     const { id } = useParams();
     const logement = logements.find((item) => item.id === id);
+
+    if (!logement) {
+        return <NotFound />;
+    }
 
     return (
         <section className="housing">
