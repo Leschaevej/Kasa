@@ -1,52 +1,31 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3.47vw 6.94vw;
+    @include margin(3.47vw, 50px, 5.33vw);
     h1 {
         visibility: hidden;
         position: absolute;
     }
-    img{
-        width: 14.583vw;
+    img {
+        @include width(14.583vw, 210px, 38.667vw);
     }
     ul {
         list-style: none;
         display: flex;
-        font-size: 1.667vw;
         font-weight: 500;
-        gap: 3.472vw;
         padding: 0;
-     }
+        @include fontSize(1.667vw, 24px, 3.2vw);
+        @include gap(3.472vw, 50px, 5.33vw);
+    }
     a {
-        color: black;
+        color: $mainTextColor;
         text-decoration: none;
-     }
-    a:hover {
-        text-decoration: underline;
-    }
-}
-@media (min-width: 1440px) {
-    header {
-        margin: 50px 100px;
-        img{
-            width: 210px;
-        }
-        ul {
-            font-size: 24px;
-            gap: 50px;
-        }
-    }
-}
-@media (max-width: 768px) {
-    header {
-        margin: 5.33vw;
-        img {
-            width: 38.667vw;
-        }
-        ul {
-            font-size: 3.2vw;
-            gap: 5.33vw;
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

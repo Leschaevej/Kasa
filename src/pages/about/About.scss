@@ -1,85 +1,45 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 .about {
-    padding: 0 6.944vw;
+    display: flex;
+    flex-direction: column;
+    @include padding(0 6.944vw, 0 100px, 0 5.333vw);
     .banner {
-        height: 15.49vw;
+        @include height(15.49vw, 223px, 29.6vw);
+        @include mobile {
+            @include borderRadius(10px);
+            &::before {
+                @include borderRadius(10px);
+            }
+        }
     }
     .collapseContainer {
-        margin: 2.778vw 0;
-        row-gap: 2.778vw;
-        .collapse{
-            .header{
-                height: 3.611vw;
-                padding: 0.694vw 1.042vw;
+        @include margin(2.778vw 0, 40px 0, 5.333vw 0);
+        .collapse {
+            &:not(:last-child) {
+                @include margin(0 0 2.778vw 0, 0 0 40px 0, 0 0 5.333vw 0);
             }
-            h3{
-                font-size: 1.667vw;
+            .header {
+                background-color: $mainColor;
+                @include height(3.611vw, 52px, 8vw);
+                @include padding(0.694vw 1.042vw, 10px 15px, 2.667vw 4vw);
             }
-            .arrow{
-                font-size: 2.222vw;
+            h3 {
+                color: $secondTextColor;
+                @include fontSize(1.667vw, 24px, 3.467vw);
             }
-            .content{
-                font-size: 1.25vw;
+            .arrow {
+                color: $secondTextColor;
+                @include fontSize(2.222vw, 24px, 3.467vw);
             }
-            .content.open{
-                padding: 1.389vw;
+            .content {
+                background-color: $secondBackgroundColor;
+                @include fontSize(1.25vw, 18px, 2.667vw);
+                &.open {
+                    @include padding(1.389vw, 20px, 2.667vw);
+                }
             }
-        }    
+        }
     }
-}
-@media (min-width: 1440px) {
-    .about {
-        padding: 0 100px;
-        .banner {
-            height: 223px;
-        }
-        .collapseContainer {
-            margin: 40px 0;
-            row-gap: 40px;
-            .collapse{
-                .header{
-                    height: 52px;
-                    padding: 10px 15px;
-                }
-                h3{
-                    font-size: 24px;
-                }
-                .arrow{
-                    font-size: 24px;
-                }
-                .content{
-                    font-size: 18px;
-                }
-                .content.open{
-                    padding: 20px;
-                }
-            }    
-        }
-    } 
-}
-@media (max-width: 768px) {
-    .about {
-        padding: 0 5.333vw;
-        .banner {
-            height: 29.6vw;
-        }
-        .collapseContainer {
-            margin: 5.333vw 0;
-            row-gap: 5.333vw;
-            .collapse{
-                .header{
-                    height: 8vw;
-                    padding: 2.667vw 4vw;
-                }
-                h3{
-                    font-size: 3.467vw;
-                }
-                .arrow{
-                    font-size: 3.467vw;
-                }
-                .content{
-                    font-size: 2.667vw;
-                }
-            }    
-        }
-    } 
 }

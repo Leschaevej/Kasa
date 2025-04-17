@@ -1,0 +1,125 @@
+@use './Variables.scss' as *;
+
+@mixin desktop {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin fontSize($default, $desktop, $mobile) {
+    & {
+        font-size: $default;
+    }
+
+    @include desktop {
+        & {
+            font-size: $desktop;
+        }
+    }
+
+    @include mobile {
+        & {
+            font-size: $mobile;
+        }
+    }
+}
+@mixin padding($default, $desktop, $mobile) {
+    & {
+        padding: $default;
+    }
+
+    @include desktop {
+        & {
+            padding: $desktop;
+        }
+    }
+
+    @include mobile {
+        & {
+            padding: $mobile;
+        }
+    }
+}
+@mixin margin($default, $desktop, $mobile) {
+    & {
+        margin: $default;
+    }
+
+    @include desktop {
+        & {
+            margin: $desktop;
+        }
+    }
+
+    @include mobile {
+        & {
+            margin: $mobile;
+        }
+    }
+}
+@mixin height($default, $desktop, $mobile) {
+    & {
+        height: $default;
+    }
+
+    @include desktop {
+        & {
+            height: $desktop;
+        }
+    }
+
+    @include mobile {
+        & {
+            height: $mobile;
+        }
+    }
+}
+@mixin width($default, $desktop, $mobile) {
+    & {
+        width: $default;
+    }
+
+    @include desktop {
+        & {
+            width: $desktop;
+        }
+    }
+
+    @include mobile {
+        & {
+            width: $mobile;
+        }
+    }
+}
+@mixin gap($default, $desktop, $mobile) {
+    & {
+        gap: $default;
+    }
+
+    @include desktop {
+        & {
+            gap: $desktop;
+        }
+    }
+
+    @include mobile {
+        & {
+            gap: $mobile;
+        }
+    }
+}
+@mixin boxShadow($x: 0, $y: 5px, $blur: 5px, $color: $shadowColor) {
+    & {
+        box-shadow: $x $y $blur $color;
+    }
+}
+@mixin borderRadius($radius: $borderRadius) {
+    & {
+        border-radius: $radius;
+    }
+}

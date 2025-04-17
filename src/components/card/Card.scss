@@ -1,13 +1,15 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 .cardContainer {
-    border-radius: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    @include borderRadius();
     .card {
         width: 100%;
         aspect-ratio: 1;
         min-height: 0;
-        border-radius: 15px;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -15,12 +17,14 @@
         justify-content: flex-end;
         transition: transform 0.3s ease;
         will-change: transform, box-shadow;
+        @include borderRadius(10px);
+        @include boxShadow();
         h3 {
-            color: white;
             z-index: 1;
         }
     }
     .card:hover {
         cursor: pointer;
+        transform: scale(1.02);
     }
 }

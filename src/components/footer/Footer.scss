@@ -1,41 +1,20 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 footer {
-    background-color: #000000 ;
+    background-color: $mainTextColor;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 2.143vw;
-    height: 14.929vw;
+    @include gap(2.143vw, 30px, 8vw);
+    @include height(14.929vw, 209px, 55.733vw);
     img {
-        width: 8.714vw;
+        @include width(8.714vw, 122px, 32.533vw);
     }
     p {
-        color: white;
-        font-size: 1.714vw;
+        color: $secondTextColor;
         font-weight: 500;
-    }
-}
-@media (min-width: 1440px) {
-    footer {
-        row-gap: 30px;
-        height: 209px;
-        img {
-            width: 122px;
-        }
-        p {
-            font-size: 24px;
-        }
-    }
-}
-@media (max-width: 768px) {
-    footer {
-        row-gap: 8vw;
-        height: 55.733vw;
-        img {
-            width: 32.533vw;
-        }
-        p {
-            font-size: 3.2vw;
-        }
+        @include fontSize(1.714vw, 24px, 3.2vw);
     }
 }

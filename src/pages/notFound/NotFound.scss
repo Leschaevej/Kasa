@@ -1,57 +1,29 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 .notFound {
     display: flex;
     flex-direction: column;
     align-items: center;
     h2 {
-        padding-bottom: 2.778vw;
-    
-        font-size: 20vw;
-        color: #ff6060;
+        color: $mainColor;
+        @include padding(2.778vw 0 0 0, 40px 0 0 0, 10.667vw 0 0 0);
+        @include fontSize(20vw, 288px, 25.6vw);
     }
     p {
-        padding-bottom: 6.944vw;
-    
-        font-size: 2.5vw;
-        color: #ff6060;
-    }
-    a {
-        padding-bottom: 6.944vw;
-        font-size: 1.25vw;
-        color: black;
-        text-decoration: underline;
-    }
-}
-@media (min-width: 1440px) {
-    .notFound {
-        h2 {
-            padding-bottom: 40px;
-            font-size: 288px;
-        }
-        p {
-            padding-bottom: 100px;
-            font-size: 36px;
-        }
-        a {
-            padding-bottom: 100px;
-            font-size: 18px;
-        }
-    }  
-}
-@media (max-width: 768px) {
-    .notFound {
-        h2 {
-            padding-bottom: 10.667vw;
-            font-size: 25.6vw;
-        }
-        p {
+        color: $mainColor;
+        @include padding(6.944vw 0 0 0, 100px 0 0 0, 10.667vw 0 0 0);
+        @include fontSize(2.5vw, 36px, 4.8vw);
+        @include mobile {
             text-align: center;
-            padding-bottom: 10.667vw;
-            font-size: 4.8vw;
             margin: 0 13.333vw;
         }
-        a {
-            padding-bottom: 10.667vw;
-            font-size: 3.733vw;
-        }
+    }
+    a {
+        color: $mainTextColor;
+        text-decoration: underline;
+        @include padding(6.944vw 0 0 0, 100px 0 0 0, 10.667vw 0 0 0);
+        @include fontSize(1.25vw, 18px, 3.733vw);
+        @include margin(0 0 6.944vw 0, 0 0 100px 0, 0 0 10.667vw 0);
     }
 }

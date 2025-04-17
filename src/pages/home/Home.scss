@@ -1,67 +1,33 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 .home {
-    padding: 0 6.944vw;
+    @include padding(0 6.944vw, 0 100px, 0 5.333vw);
     .banner {
-        height: 15.49vw;
-        h2{
-            font-size: 3.333vw;
+        @include height(15.49vw, 223px, 29.6vw);
+        h2 {
+            @include fontSize(3.333vw, 48px, 6.4vw);
+        }
+        &::before {
+            background-color: $bannerFilter;
         }
     }
     .cardContainer {
-        background-color: #f6f6f6;
-        padding: 3.4722vw;
-        margin: 3.4722vw 0;
-        gap: 3.4722vw;
-        .card{
-            h3{
-                padding: 1.04vw;
-                font-size: 1.25vw;
+        background-color: $secondBackgroundColor;
+        display: grid;
+        @include padding(3.4722vw, 50px, 0);
+        @include margin(3.4722vw 0, 50px 0, 5.333vw 0);
+        @include gap(3.4722vw, 50px, 5.333vw);
+        @include mobile {
+            background-color: $mainBackgroundColor;
+            grid-template-columns: 1fr;
+        }
+        .card {
+            h3 {
+                color: $secondTextColor;
+                @include fontSize(1.25vw, 18px, 4.8vw);
+                @include padding(1.04vw, 20px, 5.333vw);
             }
         }
     }
-}
-@media (min-width: 1440px) {
-    .home {
-        padding: 0 100px;
-        .banner {
-            height: 223px;
-            h2{
-                font-size: 48px;
-            }
-        }
-        .cardContainer {
-            padding: 50px;
-            margin: 50px 0;
-            gap: 50px;
-            .card{
-                h3{
-                    padding: 20px;
-                    font-size: 18px;
-                }
-            }
-        }
-    } 
-}
-@media (max-width: 768px) {
-    .home {
-        padding: 0 5.333vw;
-        .banner {
-            height: 29.6vw;
-            h2{
-                font-size: 6.4vw;
-            }
-        }
-        .cardContainer {
-            grid-template-columns: 1fr;
-            background-color: white;
-            padding: 0;
-            margin: 5.333vw 0;
-            gap: 5.333vw;
-            .card{
-                h3{
-                    padding: 5.333vw;
-                    font-size: 4.8vw;
-                }
-            }
-        }
-    } 
 }

@@ -1,16 +1,19 @@
+@use '../../Mixins.scss' as *;
+@use '../../Variables.scss' as *;
+
 .carousel {
     position: relative;
     width: 100%;
     margin: auto;
     .carousel-image {
         object-fit: cover;
+        @include borderRadius();
     }
     .arrow {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         background: none;
-        color: white;
         border: none;
         cursor: pointer;
     }
@@ -27,7 +30,6 @@
         right: 0;
         display: flex;
         justify-content: center;
-        color: white;
         font-weight: 500;
     }    
 }
