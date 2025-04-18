@@ -9,6 +9,7 @@
     align-items: center;
     position: relative;
     background-position: center center;
+    background-color: $footerBackgroundColor;
     @include borderRadius($borderRadius);
     @include boxShadow(0, 5px, 5px, $shadowColor);
     h2 {

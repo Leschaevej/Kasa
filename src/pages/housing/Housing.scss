@@ -77,6 +77,7 @@
                     @include fontSize(1.25vw, 18px, 3.2vw);
                     .firstName, .lastName {
                         display: inline;
+                        @include margin(0 0 0 0.347vw, 0 0 0 5px, 0);
                     }
                 }
                 .picture {
@@ -121,6 +122,7 @@
             }
             .content {
                 color: black;
+                background-color: $secondBackgroundColor;
                 @include fontSize(1.042vw, 15px, 2.933vw);
                 ul {
                     list-style: none;
@@ -138,6 +140,18 @@
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
+                .host {
+                    .name {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+    
+                        .firstName,
+                        .lastName {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
         .detail {
@@ -145,8 +159,9 @@
             flex-direction: column;
             justify-content: flex-start;
             .collapse {
-                @include margin( 0, 0, 0 0 5.333vw 0);
+                @include margin(0, 0, 0 0 5.333vw 0);
             }
         }
     }
+    
 }
